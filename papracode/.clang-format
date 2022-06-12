@@ -1,0 +1,52 @@
+---
+Standard: Cpp11
+BasedOnStyle: Google
+
+IndentWidth: 2
+TabWidth: 2
+AccessModifierOffset: -3
+ColumnLimit: 150
+UseTab: Never
+
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine : true
+AllowShortBlocksOnASingleLine: false
+AllowShortFunctionsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: true
+IndentCaseLabels: true
+
+PointerAlignment: Left
+
+AlignTrailingComments: true
+AlignConsecutiveAssignments: true
+
+NamespaceIndentation: All
+FixNamespaceComments: true
+
+IndentPPDirectives: AfterHash
+
+SpaceBeforeParens: false
+SpacesInParentheses: true
+
+CompactNamespaces: true
+
+#BreakBeforeBraces: Attach
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass:      false
+  AfterControlStatement: false
+  AfterEnum:       false
+  AfterFunction:   false
+  AfterNamespace:  false
+  AfterObjCDeclaration: false
+  AfterStruct:     false
+  AfterUnion:      false
+  AfterExternBlock: false
+  BeforeCatch:     true
+  BeforeElse:      true
+  IndentBraces:    false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+IncludeBlocks: Merge
