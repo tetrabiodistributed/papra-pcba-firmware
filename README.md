@@ -46,7 +46,7 @@ Once you have the board built and attached, you should be able to flash using ei
 
 # papra-pcb-firmware for surface mount boards
 
-Firmware is intended to be loaded on this PCB: https://github.com/tetrabiodistributed/PAPRA-PCB
+Firmware is intended to be loaded on this PCB: https://github.com/tetrabiodistributed/PAPRA-PCBA
 
 Use the following arduino settings, change the chip to match the one you are using.
 
