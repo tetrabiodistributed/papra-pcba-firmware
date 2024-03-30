@@ -53,3 +53,23 @@ Use the following arduino settings, change the chip to match the one you are usi
 ![image](https://user-images.githubusercontent.com/57600622/120357153-fc25b500-c2b9-11eb-8603-38b121836ca3.png)
 
 Note: for ATtiny204 and ATtiny214 have 2K flash memory for program space. The preprocessor for TWOKFLASHCHIP must be uncommented prior to compiling. See Line 9.
+
+# Debugging The Thru-hole board
+
+We have encountered the following issues when building a board:
+
+1. The buzzer is always buzzing when I put the battery in!
+
+Check that you have a 100k resistor on R3 instead of the 10k resistor.  A 10k resistor on R3 means that the firmware is always registering that the battery is empty, and the buzzer sounds when the battery is empty.
+
+2. Am I using a 330k resistor or a 300k resistor for R2?
+
+330k.  We should have fixed all the BOMs by now, but just in case...
+
+3. When I attach to a voltage source (not a battery, but a power supply), the voltage is strange!
+
+Check the solder joints, especially around R2 and R3. A cold solder joint can cause the circuits to behave strangely.
+
+4. Some of my LEDs aren't lighting up!
+
+Check those LED solder joints.  We try to put the LEDs on first on one side of the board, then put everything else on the other side, but that's definitely a matter of taste.
