@@ -72,13 +72,33 @@ const int battADCMin = 0;
 //const int minPWM10p = 25;   // 8.40V      110     >0%
 // These values were determined emperically by adjusting the input voltage and dialing the PWM down until motor stall
 
-// MAP FOR SEEED ESP32-C3 SANYO BLOWER
+// MAP FOR SEEED ESP32-C3 SANYO BLOWER 9BMB12H202 (two wire)
 // Limits the min pot value     Voltage   Min PWM Percentage
-const int minPWMfull = 219;  // 11.85V      69     >77%
-const int minPWM75p = 222;   // 11.10V      72     >54%
-const int minPWM50p = 223;   // 10.62V      77     >33%
-const int minPWM25p = 225;   // 9.75V       88     >10%
-const int minPWM10p = 232;   // 8.40V      110     >0%
+//const int minPWMfull = 219;  // 11.85V      69     >77%
+//const int minPWM75p = 222;   // 11.10V      72     >54%
+//const int minPWM50p = 223;   // 10.62V      77     >33%
+//const int minPWM25p = 225;   // 9.75V       88     >10%
+//const int minPWM10p = 232;   // 8.40V      110     >0%
+
+// MAP FOR SEEED ESP32-C3 SANYO BLOWER 9BMB12F201 (three wire, only two used, yellow unattached)
+// Limits the min pot value     Voltage   Min PWM Percentage
+const int minPWMfull = 220;  // 11.85V      69     >77%
+const int minPWM75p = 225;   // 11.10V      72     >54%
+const int minPWM50p = 227;   // 10.62V      77     >33%
+const int minPWM25p = 228;   // 9.75V       88     >10%
+const int minPWM10p = 230;   // 8.40V      110     >0%
+
+// to fill out these charts:
+// change your min pwm to 10 for all values
+// connect the board to a power supply
+// connect the usb-c to the arduino firmware system via a usb cable with no power supplied
+// flash the firmware with the pwm set to 10
+// set your power supply to the right voltage (11.85, 11.10, etc)
+// move the potentiometer until the fan stalls
+// change voltage, repeat, capturing the PWM value from the Serial Monitor output
+// if your values are above 200, like they are for the sanyo blowers, you may want to 
+// run the process multiple times to get better dynamic range.
+
 
 // State Machine states
 const int batteryCheck = 7;
