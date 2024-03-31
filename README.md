@@ -73,3 +73,7 @@ Check the solder joints, especially around R2 and R3. A cold solder joint can ca
 4. Some of my LEDs aren't lighting up!
 
 Check those LED solder joints.  We try to put the LEDs on first on one side of the board, then put everything else on the other side, but that's definitely a matter of taste.
+
+5. My LEDs are always lit, even if the battery has gone down to zero!  What's going on?
+
+Check that the 100k resistor at R3 was properly soldered to ground; if that resistor isn't grounded properly, then the firmware will read the battery as being constantly full, even if it's drained.  This particular error can be very bad, since it also means that the controller chip where the firmware has been installed may be damaged, since the chip is rated for 3.3V and the lack of ground at R3 may cause a full 12V to go to the chip.
