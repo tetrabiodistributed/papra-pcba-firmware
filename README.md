@@ -1,6 +1,6 @@
-# PAPRA PCB Firmware setup
+# PAPRA PCB Assembly Firmware setup
 
-To use this repo, you will need a built PAPRA pcb, either the surface mount version or the thruhole version.  Check this repo for more information:
+To use this repo, you will need a built PAPRA PCB Assembly, either the surface mount version or the thruhole version.  Check this repo for more information:
 
 https://github.com/tetrabiodistributed/papra-pcba
 
@@ -44,9 +44,9 @@ These values allow the potentiometer to be adjustable throughout the full range 
 
 Once you have the board built and attached, you should be able to flash using either ino module (thruhole for the thruhole board, surface for the surface mount board).
 
-# papra-pcb-firmware for surface mount boards
+# papra-pcba-firmware for surface mount boards
 
-Firmware is intended to be loaded on this PCB: https://github.com/tetrabiodistributed/PAPRA-PCBA
+Firmware is intended to be loaded on this PCB Assembly: https://github.com/tetrabiodistributed/PAPRA-PCBA
 
 Use the following arduino settings, change the chip to match the one you are using.
 
