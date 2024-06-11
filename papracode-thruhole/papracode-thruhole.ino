@@ -1,3 +1,5 @@
+#include <dummy.h>
+
 /*
   papracode
     - Reads battery voltage and lights up LEDs to mimic M12 battery fuel gauge
@@ -137,8 +139,7 @@ void setup() {
   pinMode(analogPot, INPUT);
   pinMode(analogBatt, INPUT);
   pinMode(buzzerPin, OUTPUT);
-  ledcAttachPin(PWMPin, pwmChannel);
-  ledcSetup(pwmChannel, PWM_Freq, PWM_Res);
+  ledcAttach(PWMPin, PWM_Freq, PWM_Res);
 
   digitalWrite(led1, LOW);
   digitalWrite(led2, LOW);
@@ -191,7 +192,7 @@ void loop() {
   } else {
     fanPWM = maxPWM;
   }
-  ledcWrite(pwmChannel, fanPWM);
+  ledcWrite(PWMPin, fanPWM);
 
   uint32_t rawBatteryValue = analogRead(analogBatt);
   battery = ( ( battery * ( numBatterySamples - 1 ) ) + ( rawBatteryValue ) ) / numBatterySamples;
